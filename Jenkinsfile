@@ -52,7 +52,7 @@ pipeline {
             steps {
                 // Build the project
                 mvn clean verify
-                echo 'replace this'
+                echo 'project build'
             }
         }
         stage('Package') {
@@ -73,7 +73,7 @@ pipeline {
             steps {
                 // Run tests
                 mvn clean test
-                echo 'replace this'
+                echo 'unittests succesful'
             }
             post {
                 always {
