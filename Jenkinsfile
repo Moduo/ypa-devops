@@ -52,9 +52,6 @@ pipeline {
             steps {
                 // Build the project
                 sh 'mvn clean verify -DskipTests=true'
-                docker {
-
-                }
                 echo 'replace this'
             }
         }
