@@ -14,4 +14,10 @@ public class HomeController {
         return "hello";
     }
 
+    @GetMapping("/somigosothen")
+    public String somigosoThen(@RequestParam(name = "name", required = false, defaultValue = "SeannaPaul") String name, Model model) {
+        model.addAttribute("name", name);
+        return "somigosothen";
+    }
+
 }
