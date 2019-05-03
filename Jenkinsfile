@@ -51,7 +51,7 @@ pipeline {
             }
             steps {
                 // Build the project
-                mvn clean verify
+                sh 'mvn clean verify'
                 echo 'project build'
             }
         }
@@ -72,7 +72,7 @@ pipeline {
             }
             steps {
                 // Run tests
-                mvn clean test
+                sh 'mvn clean test'
                 echo 'unittests succesful'
             }
             post {
