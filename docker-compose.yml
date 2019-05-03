@@ -27,7 +27,7 @@ services:
         - "traefik.docker.network=traefik-net"
         - "traefik.frontend.rule=Host:tom.dev.tomoud.nl"
   dennis-dev:
-    image: moduo/devops:dennis-7
+    image: moduo/devops:dennis-10
     networks:
     - default
     - traefik-net
@@ -39,7 +39,7 @@ services:
         - "traefik.docker.network=traefik-net"
         - "traefik.frontend.rule=Host:dennis.dev.tomoud.nl"
   annejan-dev:
-    image: moduo/devops:annejan-3
+    image: moduo/devops:annejan-7
     networks:
     - default
     - traefik-net
