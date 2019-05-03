@@ -14,4 +14,13 @@ public class HomeController {
         return "hello";
     }
 
+    @GetMapping("/gameify")
+    public String gameify(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
+
+        model.addAttribute("name", name);
+        final String gameName = "Fucked up";
+        model.addAttribute("gamename", gameName);
+        return "gameify";
+    }
+
 }
