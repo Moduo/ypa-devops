@@ -6,6 +6,6 @@
   </head>
   <body>
     <h2 class="hello-title">Hello ${name}!</h2>
-    <h3 class="hello-title">Your game name is ${gamename}!</h3>
+    <h3 class="hello-title">Your game name is '${gamename}'!</h3>
   </body>
 </html>
