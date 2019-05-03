@@ -72,7 +72,7 @@ pipeline {
             }
             steps {
                 // Run tests
-                sh 'mvn clean test'
+                sh 'mvn test'
                 echo 'unittests succesful'
             }
             post {

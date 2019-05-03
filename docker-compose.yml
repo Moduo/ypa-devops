@@ -4,6 +4,12 @@ services:
   tom-dev:
     image: moduo/devops:tom-1
     ports:
-    - 8080
+      - 8080
     labels:
-    - "traefik.frontend.rule=Host:tom.dev.tomoud.nl"
+      - "traefik.frontend.rule=Host:tom.dev.tomoud.nl"
+  dennis-dev:
+    image: moduo/devops:dennis-5
+    ports:
+      - 8080
+    labels:
+      - "traefik.frontend.rule=Host:dennis.dev.tomoud.nl"
