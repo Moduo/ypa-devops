@@ -50,7 +50,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                // @TODO: Build the project
+                echo 'replace this'
             }
         }
         stage('Package') {
@@ -70,7 +71,7 @@ pipeline {
             }
             steps {
                 // @TODO: Run tests
-                sh 'mvn test'
+                echo 'replace this'
             }
             post {
                 always {
@@ -85,12 +86,6 @@ pipeline {
                         DOCKER_IMAGE.push()
                     }
                 }
-            }
-        }
-        stage('Deploy') {
-            when { branch 'dev*' }
-            steps {
-                sh 'docker-compose up -d -f /apps/ypa-devops/docker-compose.yml'
             }
         }
     }
