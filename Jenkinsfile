@@ -52,7 +52,7 @@ pipeline {
             steps {
                 // @TODO: Build the project
                 script {
-                    DOCKER_IMAGE = docker.build "moduo/devops:melvin-000 ."
+                    sh 'mvn clean verify -DskipTest=true'
                 }
             }
         }
