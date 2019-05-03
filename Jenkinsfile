@@ -50,9 +50,7 @@ pipeline {
                 }
             }
             steps {
-                // Build the project
                 sh 'mvn clean verify -DskipTests=true'
-
             }
         }
         stage('Package') {
