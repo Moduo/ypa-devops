@@ -50,9 +50,7 @@ pipeline {
                 }
             }
             steps {
-                script {
-                    sh 'mvn clean verify -DskipTest=true'
-                }
+                sh 'mvn clean verify -DskipTests=true'
             }
         }
         stage('Package') {
