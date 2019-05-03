@@ -54,8 +54,6 @@ pipeline {
                 script {
                     DOCKER_IMAGE = docker.build "moduo/devops:melvin-000 ."
                 }
-//                sh "docker build -t moduo/devops:melvin-000 ."
-
             }
         }
         stage('Package') {
