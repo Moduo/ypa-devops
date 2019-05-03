@@ -50,7 +50,8 @@ pipeline {
                 }
             }
             steps {
-                // @TODO: Build the project
+                // Build the project
+                mvn clean verify
                 echo 'replace this'
             }
         }
@@ -70,7 +71,8 @@ pipeline {
                 }
             }
             steps {
-                // @TODO: Run tests
+                // Run tests
+                mvn clean test
                 echo 'replace this'
             }
             post {
