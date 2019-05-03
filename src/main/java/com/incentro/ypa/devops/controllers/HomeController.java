@@ -14,4 +14,10 @@ public class HomeController {
         return "hello";
     }
 
+    @GetMapping("/hagoeie")
+    public String groetnis(@RequestParam(name = "namme", required = false, defaultValue = "World") String namme, Model model) {
+        model.addAttribute("namme", namme);
+        return "hagoeie";
+    }
+
 }
