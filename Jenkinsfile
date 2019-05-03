@@ -50,7 +50,6 @@ pipeline {
                 }
             }
             steps {
-                // @TODO: Build the project
                 script {
                     sh 'mvn clean verify -DskipTest=true'
                 }
@@ -72,7 +71,6 @@ pipeline {
                 }
             }
             steps {
-                // @TODO: Run tests
                 sh "mvn test"
             }
             post {
