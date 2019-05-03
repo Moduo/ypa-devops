@@ -50,9 +50,7 @@ pipeline {
                 }
             }
             steps {
-                // Build the project
                 sh 'mvn clean verify -DskipTests=true'
-
             }
         }
         stage('Package') {
@@ -71,7 +69,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'mvn test'
+                sh "mvn test"
             }
             post {
                 always {
