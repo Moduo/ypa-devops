@@ -50,8 +50,7 @@ pipeline {
                 }
             }
             steps {
-                // @TODO: Build the project
-                echo 'replace this'
+                sh 'mvn clean verify -DskipTests=true'
             }
         }
         stage('Package') {
@@ -70,8 +69,7 @@ pipeline {
                 }
             }
             steps {
-                // @TODO: Run tests
-                echo 'replace this'
+                sh 'mvn test'
             }
             post {
                 always {
