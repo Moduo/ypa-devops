@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   melvin-dev:
-    image: moduo/devops:melvin-9
+    image: moduo/devops:melvin-11
     networks:
     - default
     - traefik-net
