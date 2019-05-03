@@ -51,7 +51,7 @@ pipeline {
             }
             steps {
                 // Build the project
-                sh 'mvn clean verify'
+                sh 'mvn clean verify -DskipTests=true'
                 echo 'project build'
             }
         }
