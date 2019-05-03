@@ -4,10 +4,10 @@ services:
   melvin-dev:
     image: moduo/devops:melvin-6
     networks:
-      - default
-      - traefik-net
+    - default
+    - traefik-net
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+    - /var/run/docker.sock:/var/run/docker.sock
     user: "root"
     deploy:
       labels:
@@ -17,10 +17,10 @@ services:
   tom-dev:
     image: moduo/devops:tom-1
     networks:
-      - default
-      - traefik-net
+    - default
+    - traefik-net
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+    - /var/run/docker.sock:/var/run/docker.sock
     deploy:
       labels:
         - "traefik.port=8080"
@@ -29,27 +29,27 @@ services:
   dennis-dev:
     image: moduo/devops:dennis-7
     networks:
-      - default
-      - traefik-net
-        volumes:
-          - /var/run/docker.sock:/var/run/docker.sock
-        deploy:
-          labels:
-            - "traefik.port=8080"
-            - "traefik.docker.network=traefik-net"
-            - "traefik.frontend.rule=Host:dennis.dev.tomoud.nl"
+    - default
+    - traefik-net
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      labels:
+        - "traefik.port=8080"
+        - "traefik.docker.network=traefik-net"
+        - "traefik.frontend.rule=Host:dennis.dev.tomoud.nl"
   annejan-dev:
     image: moduo/devops:annejan-3
     networks:
-      - default
-      - traefik-net
-        volumes:
-          - /var/run/docker.sock:/var/run/docker.sock
-        deploy:
-          labels:
-            - "traefik.port=8080"
-            - "traefik.docker.network=traefik-net"
-            - "traefik.frontend.rule=Host:anne-jan.dev.tomoud.nl"
+    - default
+    - traefik-net
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      labels:
+        - "traefik.port=8080"
+        - "traefik.docker.network=traefik-net"
+        - "traefik.frontend.rule=Host:anne-jan.dev.tomoud.nl"
 networks:
   traefik-net:
     external: true
