@@ -6,7 +6,13 @@ services:
     ports:
       - 8080
     labels:
-      - "traefik.frontend.rule=Host:tom.dev.tomoud.nl"
+    - "traefik.frontend.rule=Host:tom.dev.tomoud.nl"
+  melvin-dev:
+    image: moduo/devops:melvin-6
+    ports:
+      - 8080
+    labels:
+      - "traefik.frontend.rule=Host:melvin.dev.tomoud.nl"
   dennis-dev:
     image: moduo/devops:dennis-7
     ports:
