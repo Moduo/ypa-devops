@@ -6,49 +6,50 @@ services:
     networks:
       - default
       - traefik-net
-      volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
-      deploy:
-        labels:
-          - "traefik.port=8080"
-          - "traefik.docker.network=traefik-net"
-          - "traefik.frontend.rule=Host:melvin.dev.tomoud.nl"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    user: "root"
+    deploy:
+      labels:
+        - "traefik.port=8080"
+        - "traefik.docker.network=traefik-net"
+        - "traefik.frontend.rule=Host:melvin.dev.tomoud.nl"
   tom-dev:
     image: moduo/devops:tom-1
     networks:
       - default
       - traefik-net
-      volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
-      deploy:
-        labels:
-          - "traefik.port=8080"
-          - "traefik.docker.network=traefik-net"
-          - "traefik.frontend.rule=Host:tom.dev.tomoud.nl"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      labels:
+        - "traefik.port=8080"
+        - "traefik.docker.network=traefik-net"
+        - "traefik.frontend.rule=Host:tom.dev.tomoud.nl"
   dennis-dev:
     image: moduo/devops:dennis-7
     networks:
       - default
       - traefik-net
-      volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
-      deploy:
-        labels:
-          - "traefik.port=8080"
-          - "traefik.docker.network=traefik-net"
-          - "traefik.frontend.rule=Host:dennis.dev.tomoud.nl"
+        volumes:
+          - /var/run/docker.sock:/var/run/docker.sock
+        deploy:
+          labels:
+            - "traefik.port=8080"
+            - "traefik.docker.network=traefik-net"
+            - "traefik.frontend.rule=Host:dennis.dev.tomoud.nl"
   annejan-dev:
     image: moduo/devops:annejan-3
     networks:
       - default
       - traefik-net
-      volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
-      deploy:
-        labels:
-          - "traefik.port=8080"
-          - "traefik.docker.network=traefik-net"
-          - "traefik.frontend.rule=Host:anne-jan.dev.tomoud.nl"
+        volumes:
+          - /var/run/docker.sock:/var/run/docker.sock
+        deploy:
+          labels:
+            - "traefik.port=8080"
+            - "traefik.docker.network=traefik-net"
+            - "traefik.frontend.rule=Host:anne-jan.dev.tomoud.nl"
 networks:
   traefik-net:
     external: true
