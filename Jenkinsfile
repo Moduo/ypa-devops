@@ -50,8 +50,8 @@ pipeline {
                 }
             }
             steps {
-                // TODO: Build the application
-                echo "Build the application"
+                sh 'mvn clean install'
+
             }
         }
         stage('Package') {
