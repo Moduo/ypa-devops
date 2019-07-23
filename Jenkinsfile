@@ -70,8 +70,7 @@ pipeline {
                 }
             }
             steps {
-                // TODO: Run unit tests
-                echo "Run unit tests"
+                sh 'mvn test'
             }
             post {
                 always {
