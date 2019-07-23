@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   sean-dev:
-    image: moduo/devops:sean-6
+    image: moduo/devops:sean-10
     networks:
     - default
     - traefik-net
