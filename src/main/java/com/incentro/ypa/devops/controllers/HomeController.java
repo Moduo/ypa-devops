@@ -14,4 +14,10 @@ public class HomeController {
         return "hello";
     }
 
+    @GetMapping("/hello2")
+    public String hello(@RequestParam(name = "name", required = false, defaultValue = "Pik") String name, Model model) {
+        model.addAttribute("name", name);
+        return "hello2";
+    }
+
 }
