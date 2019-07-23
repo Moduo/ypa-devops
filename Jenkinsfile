@@ -50,7 +50,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'mvn clean verify -DskipTests=true'
+                // TODO: Build the application
+                echo "Build the application"
             }
         }
         stage('Package') {
@@ -69,7 +70,8 @@ pipeline {
                 }
             }
             steps {
-                sh "mvn test"
+                // TODO: Run unit tests
+                echo "Run unit tests"
             }
             post {
                 always {
