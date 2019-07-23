@@ -51,7 +51,6 @@ pipeline {
             }
             steps {
                 sh 'mvn clean install'
-
             }
         }
         stage('Package') {
@@ -70,7 +69,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'mvn test '
+                sh 'mvn test'
             }
             post {
                 always {
