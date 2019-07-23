@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   sean-dev:
-    image: moduo/devops:sean-10
+    image: moduo/devops:sean-11
     networks:
     - default
     - traefik-net
@@ -14,7 +14,7 @@ services:
         - "traefik.docker.network=traefik-net"
         - "traefik.frontend.rule=Host:sean.dev.tomoud.nl"
   matthijs-dev:
-    image: moduo/devops:matthijs-2
+    image: moduo/devops:matthijs-4
     networks:
     - default
     - traefik-net
