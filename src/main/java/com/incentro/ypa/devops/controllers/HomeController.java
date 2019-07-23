@@ -14,4 +14,10 @@ public class HomeController {
         return "hello";
     }
 
+    @GetMapping("/hello3")
+    public String haha(@RequestParam(name = "age", required = false, defaultValue = "vet oud joh") String age, Model model) {
+        model.addAttribute("name", age);
+        return "hello3";
+    }
+
 }
