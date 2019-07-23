@@ -70,7 +70,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'mvn test'
+                sh 'mvn test '
             }
             post {
                 always {

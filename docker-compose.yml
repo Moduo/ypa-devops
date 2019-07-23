@@ -1,8 +1,8 @@
 version: '3.3'
 
 services:
-  tom-dev:
-    image: moduo/devops:tom-1
+  sean-dev:
+    image: moduo/devops:sean-6
     networks:
     - default
     - traefik-net
@@ -12,7 +12,7 @@ services:
       labels:
         - "traefik.port=8080"
         - "traefik.docker.network=traefik-net"
-        - "traefik.frontend.rule=Host:tom.dev.tomoud.nl"
+        - "traefik.frontend.rule=Host:sean.dev.tomoud.nl"
 networks:
   traefik-net:
     external: true
