@@ -50,8 +50,6 @@ pipeline {
                 }
             }
             steps {
-                // TODO: Build the application
-                echo "Build the application"
                 sh 'mvn clean install'
             }
         }
@@ -71,8 +69,6 @@ pipeline {
                 }
             }
             steps {
-                // TODO: Run unit tests
-                echo "Run unit tests"
                 sh 'mvn test'
             }
             post {

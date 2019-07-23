@@ -1,6 +1,18 @@
 version: '3.3'
 
 services:
+  sean-dev:
+    image: moduo/devops:sean-6
+    networks:
+    - default
+    - traefik-net
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      labels:
+        - "traefik.port=8080"
+        - "traefik.docker.network=traefik-net"
+        - "traefik.frontend.rule=Host:sean.dev.tomoud.nl"
   matthijs-dev:
     image: moduo/devops:matthijs-2
     networks:
