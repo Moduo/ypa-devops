@@ -50,7 +50,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'mvn clean install'
+            	// @TODO: Build artifacts
             }
         }
         stage('Package') {
@@ -69,7 +69,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'mvn test'
+                // @TODO: Run Unit tests
             }
             post {
                 always {
