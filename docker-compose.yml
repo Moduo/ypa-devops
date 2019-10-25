@@ -1,6 +1,18 @@
 version: '3.3'
 
 services:
+  latest-dev:
+    image: moduo/devops
+    networks:
+      - default
+      - traefik-net
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      labels:
+        - "traefik.port=8080"
+        - "traefik.docker.network=traefik-net"
+        - "traefik.frontend.rule=Host:latest.dev.tomoud.nl"
   tom-dev:
     image: moduo/devops:tom-6
     networks:
