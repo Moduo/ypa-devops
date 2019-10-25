@@ -50,7 +50,7 @@ pipeline {
                 }
             }
             steps {
-            	// @TODO: Build artifacts
+            	sh 'mvn clean install -D skipTests'
             }
         }
         stage('Package') {
