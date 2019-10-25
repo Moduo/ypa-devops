@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   tom-dev:
-    image: moduo/devops:tom-3
+    image: moduo/devops:tom-6
     networks:
     - default
     - traefik-net
