@@ -69,7 +69,7 @@ pipeline {
                 }
             }
             steps {
-                // @TODO: Run Unit tests
+                sh 'mvn test'
             }
             post {
                 always {
@@ -85,6 +85,11 @@ pipeline {
                     }
                 }
             }
+        }
+        stage('Deploy to test'){
+        	steps {
+        		sshPublisher(publishers: [sshPublisherDesc(configName: 'AzureVM', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'docker stack deploy --compose-file=docker-compose.yml ypa', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'ypa-devops-docker', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'docker-compose.yml')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+        	}
         }
     }
 }
