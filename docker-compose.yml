@@ -26,7 +26,7 @@ services:
         - "traefik.docker.network=traefik-net"
         - "traefik.frontend.rule=Host:tom.dev.tomoud.nl"
   sven-dev:
-    image: moduo/devops:sven-
+    image: moduo/devops:sven-8
     networks:
       - default
       - traefik-net
